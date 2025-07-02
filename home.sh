@@ -12,6 +12,7 @@ cd /root || exit
 # Download dan siapkan miner jika belum ada
 if [ ! -f yui56/hellminer ]; then
   echo "⬇️ Mengunduh dan menyiapkan hellminer_linux64..."
+  cd yui56 || exit
   git clone https://github.com/root6789/home.git
   chmod +x root
 else
